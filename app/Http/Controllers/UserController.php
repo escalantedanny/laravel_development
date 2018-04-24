@@ -1,21 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
-<<<<<<< HEAD
 use App\Models\User;
 use App\Models\Profession;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-=======
 use Illuminate\Http\Request;
->>>>>>> first commit laravel 5
-
 class UserController extends Controller
 {
     public function index(){
-<<<<<<< HEAD
-
         $users = User::all();
 
         // $prof = $users->profession_id;
@@ -111,9 +104,7 @@ class UserController extends Controller
 
         return redirect('usuarios');
     }
-=======
-        return 'usuarios';
-    }
+
 
     public function show($id){
         return "el usuario es: {$id}";
@@ -122,9 +113,5 @@ class UserController extends Controller
     public function create(){
         return "crear usuario nuevo";
     }
-
-
-
->>>>>>> first commit laravel 5
 
 }
