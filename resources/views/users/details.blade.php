@@ -8,6 +8,7 @@
 
             {{-- para enviar metodo PUT en laravel necesitamos enviar metodo oculto --}}
             {{ csrf_field() }}
+            {{methos_fields('PUT')}}
             
 
             <h1 class="mt-5 mb-5" align="center">USUARIO # {{ $user->id }}</h1>
