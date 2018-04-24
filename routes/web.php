@@ -11,55 +11,48 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+    Route::get('/', function () {
+        return view('index');
+    });
 
-Route::get('/usuarios', 'UserController@index');
+    Route::get('/usuarios', 'UserController@index');
 
-Route::get('/usuarios/nuevo', 'UserController@create');
+    Route::get('/usuarios/nuevo', 'UserController@create');
 
-Route::post('/usuarios/crear', 'UserController@store');
+    Route::post('/usuarios/crear', 'UserController@store');
 
-Route::get('/usuarios/{user}', 'UserController@show')
-    ->where('id', '[0-9]+');
+    Route::put('/usuarios/{user}', 'UserController@update');
 
-Route::put('/usuarios/{user}', 'UserController@update');
+    Route::get('/usuarios/{user}', 'UserController@show')->where('id', '[0-9]+');
 
-Route::delete('/usuarios/eliminar/{user}', 'UserController@destroy');
+    Route::delete('/usuarios/eliminar/{user}', 'UserController@destroy');
 
-Route::get('/saludos/{name}/{nickname}', 'WelcomeUserController@index');
-
+    Route::get('/saludos/{name}/{nickname}', 'WelcomeUserController@index');
 
 
 
 
-Route::get('/parroquia', function(){
-    return view('sanjudas/parroquia');
-});
+    //rutas para las vistas estaticas
+    Route::get('/parroquia', function(){
+        return view('sanjudas/parroquia');
+    });
 
-Route::get('/quienesSomos', function(){
-    return view('sanjudas/quienesSomos');
-});
+    Route::get('/quienesSomos', function(){
+        return view('sanjudas/quienesSomos');
+    });
 
-Route::get('/contacto', function(){
-    return view('sanjudas/contacto');
-});
+    Route::get('/contacto', function(){
+        return view('sanjudas/contacto');
+    });
 
-Route::get('/register', function(){
-    return view('sanjudas/register');
-});
+    Route::get('/register', function(){
+        return view('sanjudas/register');
+    });
 
-Route::get('/login', function(){
-    return view('sanjudas/login');
-});
+    Route::get('/login', function(){
+        return view('sanjudas/login');
+    });
 
-Route::get('/usuarios/{id}', 'UserController@show')
-    ->where('id', '[0-9]+');
-
-Route::get('/saludos/{name}/{nickname}', function($name, $nickname){
-    return "el usuario es: {$name} y su sobrenombre es {$nickname}";
-});
-
+?>
 
 

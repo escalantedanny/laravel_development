@@ -5,8 +5,9 @@
 <tr>
     <div class="container">
       <div class="col">
-                  {{ method_field('delete') }}
-            {{ csrf_field() }}
+
+                {{-- {{ csrf_field() }} --}}
+
                 <a href="{{ url('usuarios/nuevo') }}" class="btn btn-info" >Registrar Nuevo usuario</a>
                 <hr>
               <table class="table table-success table-striped table-hover">

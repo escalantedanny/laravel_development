@@ -5,7 +5,6 @@ use App\Models\User;
 use App\Models\Profession;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
@@ -24,11 +23,6 @@ class UserController extends Controller
 
     public function show(User $user){
 
-        //$user = User::findOrFail($id);
-
-        // if ($user == null){
-        //     return response()->view('errors.404',[],404);
-        // }
         return view('users.details', compact('user'));
     }
     public function create(){
@@ -71,7 +65,7 @@ class UserController extends Controller
     }
 
     public function update(User $user){
-
+        
         //recibimos la data del formulario para ser enviada a la base de datos
         $data = request()->validate([
             'fname'   => 'required',
@@ -105,13 +99,5 @@ class UserController extends Controller
         return redirect('usuarios');
     }
 
-
-    public function show($id){
-        return "el usuario es: {$id}";
-    }
-
-    public function create(){
-        return "crear usuario nuevo";
-    }
 
 }
