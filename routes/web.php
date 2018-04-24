@@ -19,7 +19,6 @@ Route::get('/usuarios', 'UserController@index');
 
 Route::get('/usuarios/nuevo', 'UserController@create');
 
-<<<<<<< HEAD
 Route::post('/usuarios/crear', 'UserController@store');
 
 Route::get('/usuarios/{user}', 'UserController@show')
@@ -54,7 +53,7 @@ Route::get('/register', function(){
 Route::get('/login', function(){
     return view('sanjudas/login');
 });
-=======
+
 Route::get('/usuarios/{id}', 'UserController@show')
     ->where('id', '[0-9]+');
 
@@ -62,6 +61,5 @@ Route::get('/saludos/{name}/{nickname}', function($name, $nickname){
     return "el usuario es: {$name} y su sobrenombre es {$nickname}";
 });
 
->>>>>>> first commit laravel 5
 
 

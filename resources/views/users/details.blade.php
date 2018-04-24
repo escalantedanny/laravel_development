@@ -15,6 +15,7 @@
             
                 <div class="form-group mt-5 align-content-center">
                             <legend class="text-center header">Detalle: {{ $user->fname }}</legend>
+                            
                                @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <h6>Por favor corrige los errores debajo</h6>
