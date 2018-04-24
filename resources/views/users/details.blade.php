@@ -11,7 +11,7 @@
             {{methos_fields('PUT')}}
             
 
-            <h1 class="mt-5 mb-5" align="center">USUARIO # {{ $user->id }}</h1>
+            <h1 class="mt-5 mb-5" align="center">USUARIO N# {{ $user->id }}</h1>
             
                 <div class="form-group mt-5 align-content-center">
                             <legend class="text-center header">Detalle: {{ $user->fname }}</legend>
