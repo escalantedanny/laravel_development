@@ -14,7 +14,7 @@
             <h1 class="mt-5 mb-5" align="center">USUARIO s# {{ $user->id }}</h1>
             
                 <div class="form-group mt-5 align-content-center">
-                            <legend cass="text-center header">Detalle: {{ $user->fname }}</legend>
+                            <legend class="text-center header">Detalle: {{ $user->fname }}</legend>
                                @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <h6>Por favor corrige los errores debajo</h6>
