@@ -11,9 +11,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
+
   </head>
   <body>
 

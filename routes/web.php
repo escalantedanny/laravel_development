@@ -23,9 +23,11 @@
 
     Route::put('/usuarios/{user}', 'UserController@update');
 
-    Route::get('/usuarios/{user}', 'UserController@show')->where('id', '[0-9]+');
+    Route::get('/usuarios/{user}', 'UserController@show')->name('users.detail');
 
-    Route::delete('/usuarios/eliminar/{user}', 'UserController@destroy');
+    Route::get('/usuarios/eliminar/{user}', 'UserController@previo')->name('users.eliminar');
+
+    Route::delete('/usuarios/{user}', 'UserController@destroy')->name('users.destroy');
 
     Route::get('/saludos/{name}/{nickname}', 'WelcomeUserController@index');
 

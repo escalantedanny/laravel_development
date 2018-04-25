@@ -73,7 +73,7 @@ class UserController extends Controller
             'password'=> '',                                //enviamos el ID para que lo excluya de la validacion
             'email'   => 'required|email|unique:users,email,'.$user->id,
 
-            'profession_id' => 'required',
+            'profession_id' => '',
             'phone'   => '',
         ]);
             // validar para que el usuario no tenga necesidad cambiar la contraseña
@@ -91,9 +91,13 @@ class UserController extends Controller
         return redirect("usuarios/{$user->id}");
     }
 
+    public function previo(User $user){
+
+        return view('users.eliminar', compact('user'));
+    }
+
     public function destroy(User $user){
         
-        dd($user);
         $user->delete();
 
         return redirect('usuarios');

@@ -4,5 +4,4 @@
 
 <p></p>
 
-
 @include('templates.footer')

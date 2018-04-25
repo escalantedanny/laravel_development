@@ -16,5 +16,14 @@
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="../../../../assets/js/vendor/holder.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.btn-delete').click(function(){
+              //optenemos el objeto del boton btn-delete
+              if (confirm('desea'))
+            })
+          });
+        </script>
+    
   </body>
 </html>
