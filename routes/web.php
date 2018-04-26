@@ -52,7 +52,7 @@
     });
 
     Route::get('/login', function(){
-        return view('sanjudas/login');
+        return view('auth/login');
     });
 
 ?>
